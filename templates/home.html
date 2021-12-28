@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happiness</title>
+</head>
+<body>
+    <center>
+
+        <h1> Happiness prediction </h1><br>
+        
+        <form method="POST", action="{{url_for('get_prediction')}}">
+           <b> Relationship value :  <input type="text", name='a'> <br><br>
+            Social value :  <input type="text", name='b'> <br><br>
+            Refresh value :  <input type="text", name='c'> <br><br>
+            Atmospheric pressure value : <input type="text", name='d'> <br><br><br></b>
+            <input type="submit" , value='predict!' >
+        </form>
+
+        <br><br>
+        {{ prediction }}
+    </center>
+
+</body>
+</html>
